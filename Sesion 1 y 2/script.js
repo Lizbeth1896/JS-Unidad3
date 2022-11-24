@@ -104,15 +104,15 @@ function ordenarPokemon() {
 //     ol.append(li)
 // })
 
-// const root = document.getElementById("root")
-// const ul = document.createElement("ul")
-// root.append(ul)
+const root = document.getElementById("root")
+const ul = document.createElement("ul")
+root.append(ul)
 
-// for (let i = 0; i < pokemons.length; i++) {
-//     const li = document.createElement("li")
-//     li.textContent=pokemons[i].name
-//     ul.append(li)
-// }
+for (let i = 0; i < pokemons.length; i++) {
+    const li = document.createElement("li")
+    li.textContent=pokemons[i].name
+    ul.append(li)
+}
  
 //10. Utilizando javascript crear una tabla de pokemons con las siguientes columnas: id, name, type, base_damage, base_hp, speed
 // const root = document.getElementById("root")
