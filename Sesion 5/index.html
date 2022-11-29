@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 5</title>
+</head>
+<body>
+    <form>
+        <div style="font-family: Cambria; font-size: 15pt;">
+            <h1>Cálculo de Sueldo Neto</h1>
+            <p>
+                Nombre: <input type="text" placeholder="Escriba sus nombres" autofocus id="nombre"/> <br>
+            </p>
+            <p>
+                Apellidos: <input type="text" placeholder="Escriba sus apellidos" id="apellido"/> <br>
+            </p>
+            <p>
+                Horas trabajadas: <input type="number" placeholder="Escriba las horas trabajadas" id="horas"/> <br>
+            </p>
+            <p>
+                <label for="categoria">Categorias: </label>
+                <select name="categoria" id="categoria">
+                    <option value="selecciona">Seleccione la categoría</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+            </p>
+            <p>
+                <label for="anios_servicio">Años de servicio: </label>
+                <select name="anios_servicio" id="anios_servicio">
+                    <option value="selecciona1">Seleccione años de servicio</option>
+                    <option value="1">1 - 3</option>
+                    <option value="2">4 - 7</option>
+                    <option value="3">8 - 12</option>
+                    <option value="4">13 - más</option>
+                </select>
+            </p>
+            <input type="button" value="CALCULAR" onclick="calcularSueldo()" style="background-color:#f6a9a8; font-size: 20pt; 
+            font-family: Cambria;"><br><br>
+            <textarea name="textarea" rows="6" cols="65" id="area" disabled style="font-size: 12pt; font-family: Cambria;"></textarea>
+        </div>     
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
