@@ -146,14 +146,14 @@ function UPDATE(id) {
 
 function DELETE(id) {
   let user = users.filter(x => x.id == id)
+  console.log(user)
   if (user.length === 0) {
     alert("El usuario no existe")
   } else {
-    user=user[0]
-    console.log(user)
+    //user=user[0]
     let confirmar = prompt("Esta usted seguro? Si/No")
     if (confirmar === "Si" || confirmar==="SI" || confirmar==="si") {
-      usuarioEliminar = users.splice(user[0])
+      users.splice(user,1)
       updateRows()
       //console.log(users)
     } else {
