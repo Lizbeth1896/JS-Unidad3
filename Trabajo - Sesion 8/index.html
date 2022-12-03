@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sesion 6</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <form class="row g-3 container m-auto needs-validation" id="form" novalidate>
+    <div class="title" id="title">
+      <label for="title" class="form-title">VALIDACIÓN DE FORMULARIOS</label>
+    </div>
+    <div class="col-md-6">
+      <label for="username" class="form-label">Usuario</label>
+      <input type="text" class="form-control" id="username" required placeholder="Usuario">
+      <div class="invalid-feedback">
+        El usuario tiene que ser de 4 a 16 dígitos y solo puede contener números, letras, guión y guión bajo.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="nombre" class="form-label">Nombres</label>
+      <input type="text" class="form-control" id="nombre" required placeholder="Nombres">
+      <div class="invalid-feedback">
+        El nombre tiene que contener solo letras mayúsculas y/o minúsculas
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="pass" class="form-label">Contraseña</label>
+      <input type="password" class="form-control" id="pass" placeholder="Password" required>
+      <div id="validationServerUsernameFeedback" class="invalid-feedback">
+        La contraseña tiene que ser de 4 a 12 dígitos
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="repeatPass" class="form-label">Repetir Contraseña</label>
+      <input type="password" class="form-control" id="repeatPass" placeholder="confirmar Password" required>
+      <div class="invalid-feedback">
+        Ambas contraseñas deben de ser iguales
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="mail" class="form-label">Correo</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text">@</span>
+        <input type="text" class="form-control" id="mail"
+          aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required placeholder="Correo">
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          El correo solo puede contener letras, números, puntos, guiones y guión bajo
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="phone" class="form-label">Celular</label>
+      <input type="text" class="form-control" id="phone"
+        aria-describedby="validationServer03Feedback" required placeholder="Celular">
+      <div id="validationServer03Feedback" class="invalid-feedback">
+        El celular debe de tener 9 digitos y empezar por el 9
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="genero" class="form-label d-block">Género</label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" id="inlineCheckbox1" name="genero" value="MASCULINO" checked>
+        <label class="form-check-label" for="inlineCheckbox1">MASCULINO</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genero" value="FEMENINO">
+        <label class="form-check-label" for="inlineCheckbox2">FEMENINO</label>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="date" class="form-label">Fecha de nacimiento</label>
+      <input type="date" class="form-control" id="fechaNacimiento" required placeholder="Fecha de nacimiento">
+      <div id="validationServer03Feedback" class="invalid-feedback">
+        Debe seleccionar una fecha de nacimiento
+      </div>
+    </div>
+    <div class="col-md-12 text-center mt-5">
+      <button class="btn btn-primary" id="btn" type="submit">Enviar</button>
+    </div>
+  </form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Cambria', sans-serif;
+	background: #f3eae8;
+}
+
+.form {
+	padding: 20px;
+}
+
+.title {
+	font-size: 30pt;
+	text-align: center;
+	font-weight: bold;
+}
+
+.form-label {
+	font-size: 15pt;
+}
+
+.btn{
+	background-color: #ec8a90;
+	font-size: 15pt;
+	color:black;
+	font-weight: bold;
+	border: none;
+}
+
+*{
+    padding: 1px;
+}
+
+.liz-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.liz-input .liz-icon {
+    padding-right: 2 rem !important;
+    
+}
