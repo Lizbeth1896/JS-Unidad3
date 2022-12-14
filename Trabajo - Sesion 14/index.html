@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Sesión 14</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="Control1">
+        <form novalidate>
+            <h1>Cálculo de Salario</h1>
+            <p>Código del empleado: <input type="text" ng-model="codigo"></p>
+            <p>Número de horas trabajadas: <input type="text" ng-model="horas"></p>
+            <p>Tarifa por hora: <input type="text" ng-model="tarifa"><br></p>
+            <p><button ng-click="calcular()">CALCULAR</button></p>
+        </form>
+        <P>Código del Empleado : {{getcodigo()}}</P>
+        <P>Salario básico : {{ getSalariob()}}</P>
+        <P>Descuento : {{ getDescuento()}}</P>
+        <P>Salario neto : {{ getSalarion()}}</P>
+
+        <script>
+            let app = angular.module("myApp", [])
+
+            app.controller("Control1", function ($scope) {
+                $scope.salariob = 0
+                $scope.descuento = 0
+                $scope.salarion = 0
+
+                $scope.calcular = function () {
+                    $scope.codigoe=$scope.codigo
+                    $scope.salariob = $scope.horas * $scope.tarifa
+                    switch (true) {
+                        case $scope.salariob <= 500:
+                            $scope.descuento = 0
+                            $scope.salarion = $scope.salariob - $scope.descuento
+                            break;
+                        case $scope.salariob > 500 && $scope.salariob <= 1000:
+                            $scope.descuento = $scope.salariob * 0.02
+                            $scope.salarion = $scope.salariob - $scope.descuento
+                            break;
+                        case $scope.salariob > 1000 && $scope.salariob <= 4000:
+                            $scope.descuento = $scope.salariob * 0.08
+                            $scope.salarion = $scope.salariob - $scope.descuento
+                            break;
+                        case $scope.salariob > 4000 && $scope.salariob <= 8000:
+                            $scope.descuento = $scope.salariob * 0.15
+                            $scope.salarion = $scope.salariob - $scope.descuento
+                            break;
+                        case $scope.salariob > 8000 && $scope.salariob <= 10000:
+                            $scope.descuento = $scope.salariob * 0.21
+                            $scope.salarion = $scope.salariob - $scope.descuento
+                            break;
+                        case $scope.salariob > 10000:
+                            $scope.descuento = $scope.salariob * 0.30
+                            $scope.salarion = $scope.salariob - $scope.descuento
+                            break;
+                    }
+
+                    return $scope.salarion
+                }
+                $scope.getcodigo = function () {
+                    return $scope.codigoe
+                }
+                $scope.getSalariob = function () {
+                    return $scope.salariob
+                }
+                $scope.getDescuento = function () {
+                    return $scope.descuento
+                }
+                $scope.getSalarion = function () {
+                    return $scope.salarion
+                }
+            })
+        </script>
+    </div>
+</body>
+
+</html>
