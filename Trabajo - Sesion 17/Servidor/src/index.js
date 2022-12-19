@@ -1,7 +1,8 @@
-const { Router } = require("express");
+// const { Router } = require("express");
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
+mongoose.set('strictQuery', true);
 const userRoutes = require("./routes/user");
 const cors = require('cors');
 
